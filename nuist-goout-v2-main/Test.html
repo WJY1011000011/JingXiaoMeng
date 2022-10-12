@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- ！！！！！！！！！！！！！从地址栏获得信息的必要jquery.min.js！！！！！！！！！！！！！ -->
+    <script src="../nuist-goout-v2-main/libs/jquery/1.7.2/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="./jkm/js/jquery.qrcode.min.js?v=1"></script>
+-->
+    <script type="text/javascript" src="../nuist-goout-v2-main/assets/qrcode/qrcode/qrcode.min.js"></script>
+    <!-- ！！！！！！！！！！！！！从地址栏获得信息的必要jquery.min.js！！！！！！！！！！！！！ -->
+
+</head>
+<body>
+    <div id="div_xm" style="font-weight: bold; font-size: 1rem;padding-top: 30px;"></div>
+    <div id="div_bm" style="font-weight: bold; font-size: 1rem;"></div>
+    <div id="div_ds" style="font-weight: bold; font-size: 1rem;"></div>
+    <div id="div_bj"></div>
+
+
+    <script>
+                const params = new URLSearchParams(location.search)
+
+        $('#div_xm').text(params.get('name') + ' ' + params.get('id'))
+        $('#div_bm').text(params.get('school'))
+        $('#div_xy').text(params.get('xueyuan'))
+        $('#div_ds').text(params.get('daoshi'))
+        $('#div_bj').text(params.get('banji'))
+
+
+    </script>
+</body>
+</html>
